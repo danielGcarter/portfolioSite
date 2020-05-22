@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+<h1>{{ project.title }}</h1>
+<div class="row">
+    <div class="col-md-8">
+        <img src="{{ project.image.url }}" alt="" width="100%">
+    </div>
+    <div class="col-md-4">
+        <h4>About the project:</h4>
+        <p>{{ project.description }}</p>
+        <br>
+        <h4>Technology used:</h4>
+        <p>{{ project.technology }}</p>
+        <br>
+        <h4>Github Link:</h4>
+        <p><a href="{{ project.gitLink }}">{{ project.title }}</a></p>
+    </div>
+</div>
+{% endblock %}
